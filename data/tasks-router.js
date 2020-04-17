@@ -21,10 +21,13 @@ router.post('/', (req, res) => {
     });
   });
 
+  //.leftJoin('species as s', 's.id', 'a.species_id')
+  //.select('a.id', 'a.animal_name', 's.species_name')
+
 router.get('/', (req, res) => {
     db('tasks')
-        .leftJoin('projects.id', 'tasks.project_id')
-        .select('tasks.id', 'tasks.task_description', 'tasks.task_notes', 'tasks.tasks_status', 'projects.project_name', 'projects.project_description')
+        .join('projects', 'projects.id', 'tasks.project_id')
+        .select('tasks.id', 'tasks.task_description', 'tasks.task_notes', 'tasks.task_status', 'tasks.project_id', 'projects.project_name', 'projects.project_description')
     .then(task => {
       res.status(200).json(task);
     })
