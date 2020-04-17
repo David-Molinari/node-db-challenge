@@ -40,11 +40,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+A Relational Database, according to the TK, is a database that stores its data in tables.
+
+Also according to the TK, and differently, SQL “is the standard language used to manage databases and the data within them.”
+
 - [ ] Why do tables need a `primary key`?
+
+Each entry in the database needs a primary key becase each entry needs a unique identifier.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+table_id (foreign key column)
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+intermediary table
 
 ## Minimum Viable Product
 
